@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\superadmin\SuperadminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,4 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Superadmin
+Route::get('/usermanage', [SuperadminController::class, 'index'])->name('usermanage.index');
+Route::get('/edit-user/{id}', [SuperadminController::class, 'edit'])->name('usermanage.edit');
+Route::put('/update-user/{id}', [SuperadminController::class, 'update'])->name('usermanage.update');
+Route::post('/store-user', [SuperadminController::class, 'store'])->name('usermanage.store');
 require __DIR__.'/auth.php';
