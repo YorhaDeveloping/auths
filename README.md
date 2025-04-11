@@ -1,6 +1,3 @@
-Auths
-## ✨ Features
-
 ---
 
 ## 🛠 Tech Stack
