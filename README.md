@@ -1,3 +1,22 @@
+# Rentkana
+
+**Rentkana** is a platform connecting landlords and renters (students and workers), enabling landlords to list available rooms and renters to search and inquire about them.
+
+---
+
+## ✨ Features
+
+---
+
+## 🛠 Tech Stack
+
+-   **Frontend**: Laravel Blade, Bootstrap, (UI Framework)
+-   **Backend**: Laravel (PHP)
+-   **Database**: MySQL
+-   **Hosting**: N/A
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -34,7 +53,11 @@ After cloning the repository, follow these steps to set up the Laravel applicati
     Update the `.env` file with your database credentials and other configurations.
 
 3. **Generate Application Key**:
+<<<<<<< HEAD
    Generate a new application key:
+=======
+   Generate a new application key (OPTIONAL):
+>>>>>>> ef1fa618b369dfabbda9bc022e6cd7f73ee253d0
 
     ```bash
     php artisan key:generate
