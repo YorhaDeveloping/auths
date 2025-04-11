@@ -1,9 +1,4 @@
-# Rentkana
-
-**Rentkana** is a platform connecting landlords and renters (students and workers), enabling landlords to list available rooms and renters to search and inquire about them.
-
----
-
+Auths
 ## ✨ Features
 
 ---
