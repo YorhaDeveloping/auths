@@ -1,12 +1,3 @@
-# Rentkana
-
-**Rentkana** is a platform connecting landlords and renters (students and workers), enabling landlords to list available rooms and renters to search and inquire about them.
-
----
-
-## ✨ Features
-
----
 
 ## 🛠 Tech Stack
 
@@ -53,7 +44,7 @@ After cloning the repository, follow these steps to set up the Laravel applicati
     Update the `.env` file with your database credentials and other configurations.
 
 3. **Generate Application Key**:
-   Generate a new application key (OPTIONAL):
+   Generate a new application key:
 
     ```bash
     php artisan key:generate
