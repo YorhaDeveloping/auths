@@ -13,7 +13,8 @@ class SuperadminController extends Controller
 
     public function index()
     {
-        $users = User::where('role_id', '!=', '3')->get();
+        // $users = User::where('role_id', '!=', '3')->get();
+        $users = User::all();
         return view('superadmin.manageuser.index', compact('users'));
     }
 

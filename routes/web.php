@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\superadmin\SuperadminController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Role;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,8 +29,11 @@ Route::middleware('auth')->group(function () {
 });
 
 // Superadmin
-Route::get('/usermanage', [SuperadminController::class, 'index'])->name('usermanage.index');
-Route::get('/edit-user/{id}', [SuperadminController::class, 'edit'])->name('usermanage.edit');
-Route::put('/update-user/{id}', [SuperadminController::class, 'update'])->name('usermanage.update');
-Route::post('/store-user', [SuperadminController::class, 'store'])->name('usermanage.store');
+Route::middleware(['auth', 'App\Http\Middleware\RoleMiddleware:Superadmin'])->group(function () {
+    Route::get('/usermanage', [SuperadminController::class, 'index'])->name('usermanage.index');
+    Route::get('/edit-user/{id}', [SuperadminController::class, 'edit'])->name('usermanage.edit');
+    Route::put('/update-user/{id}', [SuperadminController::class, 'update'])->name('usermanage.update');
+    Route::post('/store-user', [SuperadminController::class, 'store'])->name('usermanage.store');
+});
+
 require __DIR__.'/auth.php';
