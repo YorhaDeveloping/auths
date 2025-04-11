@@ -6,7 +6,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h1>Admin Dashboard</h1>
-                    <p>Welcome to the Admin dashboard!</p>
+                    <p>Hello <strong>{{ Auth::user()->name }}</strong>! Welcome to your dashboard!</p>
                 </div>
             </div>
         </div>
