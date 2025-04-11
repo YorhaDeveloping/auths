@@ -44,7 +44,7 @@ After cloning the repository, follow these steps to set up the Laravel applicati
     Update the `.env` file with your database credentials and other configurations.
 
 3. **Generate Application Key**:
-   Generate a new application key (OPTIONAL):
+   Generate a new application key:
 
     ```bash
     php artisan key:generate
